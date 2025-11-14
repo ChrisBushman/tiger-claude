@@ -2,11 +2,11 @@
 
 ## What This Is
 
-A standalone Claude AI assistant that runs directly on your PowerBook G4 (OS X Tiger), making API calls without requiring a proxy server. Perfect for bringing modern AI assistance to vintage hardware!
+A standalone Claude AI assistant that runs directly on your vintage Macintosh (like a PowerBook G4!) running OS X Tiger, making API calls without requiring a proxy server. Perfect for bringing modern AI assistance to vintage hardware!
 
 ## Prerequisites
 
-✓ PowerBook G4 running OS X Tiger (10.4.x)
+✓ Vintage Mac (like a PowerBook G4) running OS X Tiger (10.4.x)
 ✓ Python 3.10+ built and installed (see BUILDING.md)
 ✓ OpenSSL 3.2.x built and installed (see BUILDING.md)
 ✓ Network connection
@@ -22,9 +22,9 @@ Visit https://console.anthropic.com on a modern device:
 - Create a new key (starts with `sk-ant-`)
 - Save it securely!
 
-### 2. Transfer Files to PowerBook
+### 2. Transfer Files to Mac
 
-Copy these files to your PowerBook:
+Copy these files to your Mac:
 - `claude_powerbook.py` - The main client
 - `BUILDING.md` - OpenSSL build guide (if not done yet)
 
