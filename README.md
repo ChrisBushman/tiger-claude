@@ -24,8 +24,8 @@ Visit https://console.anthropic.com on a modern device:
 
 ### 2. Transfer Files to Mac
 
-Copy these files to your Mac:
-- `claude_powerbook.py` - The main client
+Copy these files to your vintage Mac:
+- `tiger-claude.py` - The main client
 - `BUILDING.md` - OpenSSL build guide (if not done yet)
 
 ### 3. Set Up API Key
@@ -39,7 +39,7 @@ source ~/.bash_profile
 ### 4. Make Executable
 
 ```bash
-chmod +x claude_powerbook.py
+chmod +x tiger-claude.py
 ```
 
 ### 5. Test It!
@@ -49,10 +49,10 @@ chmod +x claude_powerbook.py
 python3 test_setup.py
 
 # Check SSL configuration
-python3 claude_powerbook.py --check-ssl
+python3 tiger-claude.py --check-ssl
 
 # Try a simple question
-python3 claude_powerbook.py "Hello, Claude!"
+python3 tiger-claude.py "Hello, Claude!"
 ```
 
 ## Usage
@@ -60,7 +60,7 @@ python3 claude_powerbook.py "Hello, Claude!"
 ### Interactive Mode (Recommended)
 
 ```bash
-python3 claude_powerbook.py
+python3 tiger-claude.py
 ```
 
 Then use commands:
@@ -76,13 +76,13 @@ claude> test calculator.py
 
 ```bash
 # Quick questions
-python3 claude_powerbook.py "Explain quicksort algorithm"
+python3 tiger-claude.py "Explain quicksort algorithm"
 
 # Ask about a file
-python3 claude_powerbook.py "What does this code do?" script.py
+python3 tiger-claude.py "What does this code do?" script.py
 
 # Multiple files for context
-python3 claude_powerbook.py "How do these work together?" main.c utils.c header.h
+python3 tiger-claude.py "How do these work together?" main.c utils.c header.h
 ```
 
 ## Available Commands (Interactive Mode)
@@ -148,16 +148,16 @@ claude> test math_functions.py
 Add to `~/.vimrc`:
 ```vim
 " Explain visual selection
-vnoremap <leader>ce :w !python3 ~/claude_powerbook.py "Explain this code:"<CR>
+vnoremap <leader>ce :w !python3 ~/tiger-claude.py "Explain this code:"<CR>
 
 " Review current file
-nnoremap <leader>cr :!python3 ~/claude_powerbook.py review %<CR>
+nnoremap <leader>cr :!python3 ~/tiger-claude.py review %<CR>
 
 " Fix current file
-nnoremap <leader>cf :!python3 ~/claude_powerbook.py fix %<CR>
+nnoremap <leader>cf :!python3 ~/tiger-claude.py fix %<CR>
 
 " Ask about function under cursor
-nnoremap <leader>ca :!python3 ~/claude_powerbook.py "What does this function do?" %<CR>
+nnoremap <leader>ca :!python3 ~/tiger-claude.py "What does this function do?" %<CR>
 ```
 
 ### Emacs
@@ -167,7 +167,7 @@ Add to `~/.emacs`:
 ;; Send region to Claude
 (defun claude-explain-region (start end)
   (interactive "r")
-  (shell-command-on-region start end "python3 ~/claude_powerbook.py 'Explain this code:'"))
+  (shell-command-on-region start end "python3 ~/tiger-claude.py 'Explain this code:'"))
 
 (global-set-key (kbd "C-c c e") 'claude-explain-region)
 ```
@@ -178,7 +178,7 @@ Create a script in `~/Library/Application Support/BBEdit/Scripts/`:
 ```bash
 #!/bin/bash
 # Ask Claude about current file
-python3 ~/claude_powerbook.py "Explain this code:" "$BB_DOC_PATH"
+python3 ~/tiger-claude.py "Explain this code:" "$BB_DOC_PATH"
 ```
 
 ## Performance
@@ -232,13 +232,13 @@ export SSL_CERT_FILE=/usr/local/ssl/cert.pem
 ### Save Responses to File
 
 ```bash
-python3 claude_powerbook.py "Explain Python generators" > explanation.txt
+python3 tiger-claude.py "Explain Python generators" > explanation.txt
 ```
 
 ### Pipe Code to Claude
 
 ```bash
-cat mycode.py | python3 claude_powerbook.py "Review this:"
+cat mycode.py | python3 tiger-claude.py "Review this:"
 ```
 
 ### Batch Processing
@@ -246,7 +246,7 @@ cat mycode.py | python3 claude_powerbook.py "Review this:"
 ```bash
 for file in *.c; do
     echo "Reviewing $file..."
-    python3 claude_powerbook.py "Quick code review:" "$file" >> review_results.txt
+    python3 tiger-claude.py "Quick code review:" "$file" >> review_results.txt
 done
 ```
 

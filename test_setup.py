@@ -298,7 +298,7 @@ def main():
     print("")
     if all_passed:
         print("SUCCESS! Everything is working correctly.")
-        print("You can now use the Claude client: ./claude_powerbook.py")
+        print("You can now use the Claude client: ./tiger-claude.py")
     else:
         print("PROBLEMS DETECTED. Please fix the issues above.")
         print("Refer to BUILDING.md for detailed instructions.")
