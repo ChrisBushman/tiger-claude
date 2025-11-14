@@ -1,4 +1,4 @@
-# PowerBook Claude Client - Quick Start
+# tiger-claude Client - Quick Start
 
 ## What This Is
 
